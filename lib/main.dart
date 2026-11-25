@@ -223,12 +223,15 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             children: [
+              SizedBox(
+                width: 4,
+              ),
               Image.network("https://s359.kapook.com/pagebuilder/87ab33ae-8dca-487d-ac86-779086de65e0.jpg"
                 ,width: 135,
               height: 135,
               fit: BoxFit.cover,),
                   Image.network("https://images.dmc.tv/wallpaper/raw/13809.jpg"
-                    ,width: 141,
+                    ,width: 135,
                     height: 135,
                     fit: BoxFit.cover,),
               Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMxg-Gj98yhuLTNSZLG1sa89AaHM3lQvESwY5GPHnAw&s=10"
