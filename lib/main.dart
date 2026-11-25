@@ -22,76 +22,223 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'หน้าแรก',
-          style: TextStyle(
-          color: Colors.pinkAccent, //สีอักษร
-          backgroundColor: Colors.amber, //สีพื้นหลัง
-          fontSize: 32, //ขนาดอักษร
-          fontWeight: FontWeight.w800, //ความหนาอักษร),
-        ),
-        ),
-        leading: Text("Leading"),
-        actions: [
-          Icon(
-            Icons.menu, //ชื่อไอคอน
-            size: 60, //ขนาด
-            color: Colors.blue, //สี
-          ),
-          Icon(Icons.person)
+        title: Text('Kasaz_xdpro'),
+        actions: [Icon(Icons.menu,
+          size: 30,)
         ],
       ),
       body: Column(
         children: [
-          Text("Hello"),
-          Row( //แถวแนวนอน
-            children: [
-              //ดึงภาพจากลิงก์
-              Image.network("https://i.pinimg.com/736x/73/2d/c5/732dc53124da4a188a184d46c00280eb.jpg"
-                ,width: 200, //กว้าง
-                height: 200, //สูง
+        Row(
+          children: [
+            SizedBox(
+              width: 20,
+            ),
+            ClipOval(
+              child: Image.asset("assets/me.jpg"
+                ,width: 80,
+                height: 80,
                 fit: BoxFit.cover,
               ),
-              ClipOval(
-                child: Image.asset("assets/puppy.jpg",
-                  width: 200, //กว้าง
-                  height: 200, //สูง
-                  fit: BoxFit.cover,
+            ),
+            SizedBox(
+              width: 45,
+            ),
+            Column(
+              children: [
+                Text('24',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
-              )
+                Text('โพสต์',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                    ),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 52,
+            ),
+            Column(
+              children: [
+                Text('100.M',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text('ผู้ติดตาม',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 12,
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 43,
+            ),
+            Column(
+              children: [
+                Text('0',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text('กำลังติดตาม',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Text('น.ส.การะเกด พิมแพง',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
           Row(
             children: [
-              Expanded( //ขยาย
-                  child: ElevatedButton(
-                      onPressed: () => {}, child: Text("ปุ่ม"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.lightGreen.shade600,
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusGeometry.circular(8)
-                        )
-                      ),
-                  )
-              ),
               SizedBox(
                 width: 20,
-                height: 100,
+              ),
+              Column(
+                children: [
+                  Text('แผนกเทคโนโลยีสารสนเทศ',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Text('อยากลาออก',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(child: SizedBox(
+                width: 20,
+                  child: ElevatedButton(onPressed: () => {},
+                  child: Text('ติดตาม'),
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.lightGreen.shade600,
+                foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(8))
+                ),
+                )
+              )
+                ),
+              SizedBox(
+                width: 10,
               ),
               Expanded(
-                  child: OutlinedButton(
-                      onPressed: () => {},
-                      child: Text("ปุ่ม"),
-                      style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.blue.shade300
-                  ),
-                  )
+                child: SizedBox(
+                  width: 20,
+                  child: OutlinedButton(onPressed: () => {},
+                  child: Text('ติดตาม'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.pink.shade300,
+                  shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusGeometry.circular(8))
+                ),
+              )
+              )
+              ),
+              const SizedBox(width: 8,)
+            ],
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 95,
+              ),
+              Icon(
+                Icons.grid_on,
+                size: 25,
+                color: Colors.pink.shade500,
+              ),
+              SizedBox(
+                width: 180,
+              ),
+              Icon(
+                  Icons.person_pin,
+                size: 25,
+                color: Colors.pink.shade500,
               )
             ],
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              Image.network("https://s359.kapook.com/pagebuilder/87ab33ae-8dca-487d-ac86-779086de65e0.jpg"
+                ,width: 135,
+              height: 135,
+              fit: BoxFit.cover,),
+                  Image.network("https://images.dmc.tv/wallpaper/raw/13809.jpg"
+                    ,width: 141,
+                    height: 135,
+                    fit: BoxFit.cover,),
+              Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMxg-Gj98yhuLTNSZLG1sa89AaHM3lQvESwY5GPHnAw&s=10"
+                ,width: 135,
+                height: 135,
+                fit: BoxFit.cover,),
+            ],
+          ),
         ],
-      )
+        ),
     );
   }
 }
